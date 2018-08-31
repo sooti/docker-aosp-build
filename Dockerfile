@@ -1,17 +1,12 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER camel
+
+ENV USER root
 
 # install dependencies
 RUN apt-get update
-RUN apt-get install -y bc bison bsdmainutils build-essential curl \
-    flex g++-multilib gcc-multilib git gnupg gperf lib32ncurses5-dev \
-    lib32readline-gplv2-dev lib32z1-dev libesd0-dev libncurses5-dev \
-    libsdl1.2-dev libwxgtk2.8-dev libxml2-utils lzop \
-    openjdk-7-jdk \
-    pngcrush schedtool xsltproc zip zlib1g-dev && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get install -y openjdk-8-jdk android-tools-adb bc bison build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev
 
-ENV USER root
 
 WORKDIR /build
 VOLUME /build
