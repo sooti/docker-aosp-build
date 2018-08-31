@@ -20,3 +20,4 @@ http://www.android5.online/Android/androidjc/gyandroid/201702/60716.html
 https://ubuntuforums.org/archive/index.php/t-1748408.html
 http://lifeonubuntu.com/ubuntu-missing-add-apt-repository-command/
 https://hub.docker.com/r/igorsh/ubuntu10.04-android/~/dockerfile/
+http://android-rebuilds.beuc.net/SDK_6.0.0/
