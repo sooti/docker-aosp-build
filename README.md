@@ -1,13 +1,17 @@
 Docker Ubuntu Image to build AOSP source code
 ====
 
-Support API 4 (android-1.6_r1.2), API 23 (android-6.0.1_r77), API 28 (android-9.0.0_r1).
-
+Support API 4 (android-1.6_r1.2), API 23 (android-6.0.1_r77), API 28 (android-9.0.0_r1) and master branch.
 Download the source code, go into the root folder of project. Use the docker image as:
 
 ```shell
-docker pull camelcc/aosp-build:28
-docker run -it --rm -v "$PWD":/build -w /build camelcc/aosp-build:28
+docker pull camelcc/aosp-build
+docker run -it --rm -v "$PWD":/build -w /build camelcc/aosp-build  
+```
+
+It will open a terminal, with a build script copied into /usr/local/bin, to build AOSP, run:
+``` shell
+/usr/local/bin/aosp-build.sh aosp_walleye-userdebug
 ```
 
 After this, it will open a bash shell and following whatever steps google documented.
