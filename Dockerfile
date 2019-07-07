@@ -1,5 +1,5 @@
-FROM ubuntu:18.04
-MAINTAINER camel
+FROM ubuntu:19.04
+MAINTAINER sooti
 
 ENV USER root
 
@@ -43,14 +43,11 @@ RUN apt-get -o Acquire::ForceIPv4=true update && \
                                                   schedtool \
                                                   squashfs-tools \
                                                   yasm \
+                                                  nano \
+                                                  wget \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /build
 VOLUME /build
-
-COPY aosp-build.sh /usr/local/bin/aosp-build.sh
-RUN chmod 777 /usr/local/bin/aosp-build.sh
-
-# ENTRYPOINT ["/usr/local/bin/aosp-build.sh"]
 
 CMD ["/bin/bash"]
